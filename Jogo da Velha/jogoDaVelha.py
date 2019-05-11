@@ -22,7 +22,7 @@ while True:
     if jogando == False:
         # Trocando o jogador em caso de vitoria, porque quando o loop retorna ao inicio ele é trocado
         jogador = 'O' if jogador == 'X' else 'X'
-        print(f'VOTORIA DO JOGADOR: {jogador}')
+        print(f'ViTORIA DO JOGADOR: {jogador}')
         break
 
     # Verifica se o jogo empatou
@@ -38,8 +38,9 @@ while True:
     # Verificando se a string NÃO é um número
     if not(posiJogada.isdigit()):
         system('cls||clear')
-        print('NÃO SÃO ACEITOS: LETRAS, ESPAÇOS OU CARACTERES ESPECIAIS')
+        print('NÃO SÃO ACEITOS:\n LETRAS, ESPAÇOS OU CARACTERES ESPECIAIS')
         print('TENTE NOVAMENTE!!!')
+        print()
         continue # Retornando ao inicio o loop
     else:
         # Convertendo a posição escolhida de STRING para INT e subtraindo 1
@@ -47,7 +48,9 @@ while True:
 
         # Verificando se a posição escolhida existe
         if not (0 <= posiJogada < 9):
+            system('cls||clear')
             print('CASA NÃO EXISTE, TENTE NOVAMENTE.')
+            print()
             continue # Retornando ao inicio o loop
 
     # Verificando se a casa escolhida está VAZIA
