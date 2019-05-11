@@ -9,11 +9,11 @@ system('cls||clear') # Método sendo usado para limpar a tela do prompt/terminal
 
 # Lista de palavras
 listaPalavras = ['paralelepipedo', 'ferrari', 'papagaio', 'motocicleta',
-                 'titanic', 'tsunami', 'terremoto', 'frança', 'brasil',
+                 'titanic', 'tsunami', 'terremoto', 'foguete', 'brasil',
                  'europa', 'aniversario', 'python', 'caneta', 'lapiseira',
                  'aviao', 'metralhadora', 'velocidade', 'gorila', 'homem',
                  'mulher', 'infinito', 'coringa', 'batman', 'girafa',
-                 'elefante', 'astronalta', 'programacao', 'computador']
+                 'elefante', 'astronalta', 'javascript', 'computador']
 
 # Sorteando uma palavra para ser adivinhada no jogo
 palavraSecreta = choice(listaPalavras)
@@ -44,9 +44,11 @@ while True:
         # método isalpha está verificando se tem caracteres diferente de letras
         if len(tentativa) != 1 or tentativa.isalpha() == False:
             system('cls||clear')
-            print('\nNÃO É PERMITIDO: MAIS DE UM DIGITO, DIGITOS ESPECIAIS, NÚMEROS OU ESPAÇOS.')
-            print('TENTE NOVAMENTE!!!')
+            print('NÃO É PERMITIDO:\n- MAIS DE UM DIGITO;\n- DIGITOS ESPECIAIS;\n- NÚMEROS OU ESPAÇOS.')
+            print('\nTENTE NOVAMENTE!!!')
+            print('\nPALAVRA: ' + senha)
             tentativa = input('\nDigite uma letra: ').lower().strip()
+            continue
         else:
             system('cls||clear')
             break
@@ -54,7 +56,7 @@ while True:
     
     # Verificando se a letra tentada já foi informada anteriormente
     if tentativa in digitadas:
-        print('Você já tentou essa letra, tente nomente!!!')
+        print('Você já tentou essa letra.\nTente novamente!!!\n')
         continue
     else:
         digitadas += tentativa
@@ -62,7 +64,7 @@ while True:
             acertos += tentativa
         else:
             erros += 1
-            print('ERRROUU!!!')
+            print('ERRROUU!!!\n')
 
     # Criando a estrutura da forca e o personagem, utilizando operador ternário
     print('X=======:=====\nX       :  ')
