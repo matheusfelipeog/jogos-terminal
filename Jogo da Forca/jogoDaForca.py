@@ -115,7 +115,7 @@ X   (__/ (__)'''
         break
 
 
-#Modélo do avatar da forca
+# Modelo do avatar da forca
 #      //\
 #     ///\\
 #    //. .\\
