@@ -7,7 +7,7 @@ system('cls||clear') # Método sendo usado para limpar a tela do prompt/terminal
                      # passando como parâmetro cls (Limpa no windows) e clear (linux) 
 
 # Guarda numero aleatório
-numeroMagico = randrange(0, 101)
+numeroMagico = randrange(1, 101)
 
 # Número de tentativas restantes
 numeroTentativas = 7
